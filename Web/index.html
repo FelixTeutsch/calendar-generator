@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<title>Calendar Generator</title>
+		<link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+		<link rel="stylesheet" href="css/variables.css">
+		<link rel="stylesheet" href="css/base.css">
+		<link rel="stylesheet" href="css/image-area.css">
+		<link rel="stylesheet" href="css/drop-zone.css">
+		<link rel="stylesheet" href="css/selected-images.css">
+		<link rel="stylesheet" href="css/generateBtn.css">
+		<link rel="stylesheet" href="css/test.css">
+	</head>
+
+	<body>
+		<div class="container">
+			<div class="image-area">
+				<h1>Calendar Generator</h1>
+				<div class="drop-zone" id="dropZone">
+					<input type="file" id="fileInput" accept="image/*" multiple>
+					<label for="fileInput">
+						<i class="material-icons">cloud_upload</i>
+						<span>Drag &amp; Drop Files or Click to Upload</span>
+					</label>
+					<p id="uploadInfo">No images uploaded yet.</p>
+				</div>
+				<div class="selected-images" id="imageContainer">
+					<!-- Selected images will be displayed here -->
+				</div>
+				<p id="imageCount">0 / 52</p>
+			</div>
+			<button id="generateBtn">
+				<i class="material-icons">calendar_today</i>
+				Generate Calendar
+			</button>
+		</div>
+
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.3.2/html2canvas.min.js"></script>
+		<script src="removeFile.js"></script>
+		<script src="fileDrop.js"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+		<script src="script.js"></script>
+	</body>
+
+</html>

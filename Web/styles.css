@@ -1,0 +1,119 @@
+/* Stylesheet using RefactoringUI style guide and "Sunny Afternoon" color palette */
+
+body {
+	font-family: Arial, sans-serif;
+	background-color: #ffcdb2; /* Lightest */
+	color: #22223b; /* Darkest */
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	height: 100vh;
+	margin: 0;
+}
+
+.container {
+	max-width: 1000px;
+	margin: 0 auto;
+	display: flex;
+	flex-direction: column; /* Changed to column layout */
+}
+
+.image-area {
+	flex: 1;
+}
+
+h1 {
+	text-align: center;
+	margin-bottom: 20px;
+	color: #0077b6; /* Accent */
+}
+
+.drop-zone {
+	border: 2px dashed #888888;
+	padding: 20px;
+	border-radius: 10px;
+	text-align: center;
+	cursor: pointer;
+	margin-bottom: 20px;
+}
+
+.drop-zone input[type='file'] {
+	display: none;
+}
+
+.drop-zone label {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
+
+.drop-zone .icon {
+	width: 48px;
+	height: 48px;
+	margin-bottom: 10px;
+}
+
+.drop-zone.drag-over {
+	background-color: #e5e5e5; /* Gray background on dragover */
+}
+
+.selected-images {
+	display: flex;
+	flex-wrap: wrap;
+	max-height: 400px;
+	overflow-y: auto;
+	scrollbar-width: thin;
+}
+
+.selected-images img {
+	position: relative;
+	width: 100px;
+	height: 100px;
+	object-fit: cover;
+	border-radius: 5px;
+	margin: 5px;
+	cursor: pointer;
+}
+
+.selected-images img:hover::after {
+	content: '\f872'; /* Unicode for delete icon (Material Icons) */
+	font-family: 'Material Icons';
+	font-size: 24px;
+	color: #ff0000; /* Red */
+	position: absolute;
+	top: 5px;
+	right: 5px;
+}
+
+#imageCount {
+	margin-top: 10px;
+	text-align: center;
+}
+
+#generateBtn {
+	background-color: #f37121; /* Danger */
+	color: #ffffff; /* Lightest */
+	padding: 10px 15px;
+	border: none;
+	border-radius: 5px;
+	cursor: pointer;
+	margin: 20px auto 0; /* Adjusted margin */
+}
+
+/* Styles for Material icons */
+.material-icons {
+	font-size: 24px; /* Adjust icon size as needed */
+	margin-right: 5px; /* Add space between the icon and text in the button */
+}
+
+/* Responsive styles */
+@media (max-width: 768px) {
+	.container {
+		flex-direction: column;
+	}
+
+	.upload-area,
+	.image-area {
+		padding-right: 0;
+	}
+}

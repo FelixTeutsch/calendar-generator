@@ -1,0 +1,28 @@
+/* base.css */
+
+body {
+	font-family: Arial, sans-serif;
+	color: var(--color-darkest);
+	background-color: var(--color-gray-background);
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	height: 100vh;
+	margin: 0;
+}
+h1 {
+	padding: 0;
+	margin: 0;
+	color: var(--color-accent);
+}
+
+.container {
+	background-color: var(--color-lightest);
+	max-width: 1000px;
+	margin: 0 auto;
+	display: flex;
+	flex-direction: column;
+	padding: 24px 48px;
+	border-radius: var(--border-radius);
+	box-shadow: var(--box-shadow);
+}

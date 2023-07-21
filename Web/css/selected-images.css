@@ -1,0 +1,53 @@
+/* selected-images.css */
+
+.selected-images {
+	display: flex;
+	flex-wrap: wrap;
+	min-height: 100px;
+	width: 400px;
+	max-width: 400px;
+	max-height: 400px;
+	overflow-y: auto;
+	background-color: var(--color-white);
+	scrollbar-width: thin;
+	border-radius: var(--border-radius);
+	padding: 12px;
+	gap: 12px;
+	align-items: start;
+	justify-content: start;
+	box-sizing: border-box;
+}
+
+.selected-images .image-container {
+	width: 110px;
+	height: 110px;
+	border-radius: var(--border-radius-small);
+	cursor: pointer;
+	position: relative;
+	box-shadow: var(--box-shadow);
+	background-size: cover;
+	background-position: center;
+}
+
+.selected-images .image-container:hover::after {
+	/* font-family: 'Material Icons';
+	content: '\e5cc'; */
+	content: '\e872'; /*Unicode for delete icon (Material Icons) */
+	font-family: 'Material Icons';
+	font-size: 24px;
+	color: var(--color-red);
+	position: absolute;
+	top: 5px;
+	right: 5px;
+}
+
+#imageCount {
+	align-self: flex-end;
+	font-size: smaller;
+	margin: 0;
+	padding: 0;
+	margin-top: calc(var(--border-radius) / 2);
+	padding-right: var(--border-radius);
+	text-align: center;
+	color: var(--color-info);
+}

@@ -62,7 +62,9 @@ def create_calendar(images_folder, output_pdf):
         # Add weekdays
         weekdays = calendar.day_name
         for i, weekday in enumerate(weekdays):
-            c.drawString(x + 10 + (i * (image_width / 7)), page_height - 100, weekday)
+            c.drawString(
+                x + 10 + (i * (image_width / 7)), page_height - 100, weekday[:2]
+            )
 
         # Move to the next week or new page if needed
         if week_number % weeks_per_page == 0:
@@ -75,8 +77,6 @@ def create_calendar(images_folder, output_pdf):
 
 
 if __name__ == "__main__":
-    images_folder = (
-        "../images"  # or provide the absolute path if the images folder is elsewhere
-    )
-    output_pdf = "output_calendar.pdf"
+    images_folder = "python/images"
+    output_pdf = "python/output_calendar.pdf"
     create_calendar(images_folder, output_pdf)

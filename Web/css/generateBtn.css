@@ -1,0 +1,20 @@
+/* generateBtn.css */
+
+#generateBtn {
+	background-color: var(--color-danger);
+	color: var(--color-white);
+	padding: 10px 15px;
+	border: none;
+	border-radius: var(--border-radius);
+	cursor: pointer;
+	margin: 20px auto 0;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	gap: 12px;
+	transition: all 0.2s ease-in-out;
+}
+
+#generateBtn:hover {
+	background-color: var(--color-red);
+}

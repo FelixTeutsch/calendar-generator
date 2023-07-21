@@ -1,0 +1,4 @@
+.test::before {
+	font-family: 'Material Icons';
+	content: '\e5cc';
+}

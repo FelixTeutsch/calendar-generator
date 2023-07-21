@@ -1,0 +1,39 @@
+/* drop-zone.css */
+
+.drop-zone {
+	/* border: 2px dashed #888888; */
+	padding: 20px;
+	border-radius: var(--border-radius);
+	text-align: center;
+	max-width: 400px;
+	width: 400px;
+	box-sizing: border-box;
+	margin: 0 auto 20px;
+	box-shadow: var(--inner-box-shadow);
+	background-color: var(--color-lighter);
+}
+
+.drop-zone,
+.drop-zone * {
+	cursor: pointer;
+}
+
+.drop-zone input[type='file'] {
+	display: none;
+}
+
+.drop-zone label {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
+
+.drop-zone .icon {
+	width: 48px;
+	height: 48px;
+	margin-bottom: 10px;
+}
+
+.drop-zone.drag-over {
+	background-color: var(--color-gray-background);
+}

@@ -1,0 +1,22 @@
+/* variables.css */
+
+:root {
+	/* Color Palette */
+	--color-lightest: #ffcdb2;
+	--color-lighter: #ffc3a3;
+	--color-darkest: #22223b;
+	--color-info: #8a6e63;
+	--color-accent: #0077b6;
+	--color-gray-background: #e5e5e5;
+	--color-red: #ff0000;
+	--color-danger: #f37121;
+	--color-white: #ffffff;
+
+	/* Border Radius */
+	--border-radius: 10px;
+	--border-radius-small: 5px;
+
+	/* Box Shadows */
+	--box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+	--inner-box-shadow: inset 0 2px 1px rgba(0, 0, 0, 0.2), inset 0 -2px 1px rgba(254, 236, 226, 0.5);
+}
